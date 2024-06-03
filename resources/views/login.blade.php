@@ -1,26 +1,61 @@
 <x-layout>
-    <main class="form-signin w-100 m-auto">
-        <form>
-          <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-      
-          <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+  <div class="my-login-page ">
+    <section class="h-100 ">
+      <div class="container h-100 ">
+        <div class="row justify-content-md-center h-100">
+          <div class="card-wrapper">
+            <div class="brand">
+              <img src="img/logo.jpg" alt="logo">
+            </div>
+            <div class="card fat shadow-lg p-3 mb-5 bg-white">
+              <div class="card-body">
+                <h4 class="card-title">Login</h4>
+
+                <form action="/sesi/login" method="POST" class="my-login-validation">
+                  @csrf
+                  <div class="form-group">
+                    <label for="email">E-Mail Address</label>
+                    <input id="email" type="email" class="form-control" name="email" value="" required autofocus style="height: 37px; font-size:15px;">
+                    <div class="invalid-feedback">
+                      Email is invalid
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="password">Password
+                      <a href="forgot.html" class="float-right">
+                        Forgot Password?
+                      </a>
+                    </label>
+                    <input id="password" type="password" class="form-control" name="password" required data-eye style="height: 37px; font-size:15px;">
+                      <div class="invalid-feedback">
+                        Password is required
+                      </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <div class="custom-checkbox custom-control">
+                      <input type="checkbox" name="remember" id="remember" class="custom-control-input" >
+                      <label for="remember" class="custom-control-label">Remember Me</label>
+                    </div>
+                  </div>
+  
+                  <div class="form-group m-0">
+                    <button type="submit" class="btn btn-block heigh">
+                      Login
+                    </button>
+                  </div>
+                  <div class="mt-4 text-center">
+                    Don't have an account? <a href="register.html">Create One</a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-      
-          <div class="form-check text-start my-3">
-            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Remember me
-            </label>
-          </div>
-          <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-          <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
-        </form>
-      </main>
+        </div>
+      </div>
+    </section>
+  
+    
+  </div>
 </x-layout>

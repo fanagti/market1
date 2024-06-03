@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class DetailTransaction extends Model
 {
     use HasFactory;
+    protected $guarded= ['id'];
+
     public function transaction(): BelongsTo
     {
         return $this->belongsTo(Transaction::class);

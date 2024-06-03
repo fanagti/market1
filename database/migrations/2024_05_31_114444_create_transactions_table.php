@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id");
+            $table->foreignId("user_id")->constrained();
             $table->date("date")->nullable();
             $table->integer("total");
             $table->enum("status", ["belum lunas", "lunas"])->nullable();   

@@ -16,13 +16,15 @@
 				<div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 					<div class="popular-img">
 						<img src="/assets/img/gallery/arrival1.png" alt="">
-						<div class="favorit-items">
-							<!-- <span class="flaticon-heart"></span> -->
-							<img src="/assets/img/gallery/favorit-card.png" alt="">
-						</div>
+						<a href="">
+							<div class="favorit-items">
+								<!-- <span class="flaticon-heart"></span> -->
+								<img src="/assets/img/gallery/favorit-card.png" alt="">
+							</div>
+						</a>
 					</div>
 					<div class="popular-caption">
-						<h3><a href="product_details.html">{{ $product->name }}</a></h3>
+						<h3><a href="/detail/{{ $product->id }}">{{ $product->name }}</a></h3>
 						<div class="rating mb-10">
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
