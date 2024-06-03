@@ -32,7 +32,7 @@
 	<x-loader></x-loader>
     {{-- loader end --}}
 	{{-- header --}}
-	<x-header></x-header>
+	<x-header><x-slot:carts>{{ $carts }}</x-slot:carts></x-header>
     <!-- header end -->
    {{-- footer --}}
    <main>

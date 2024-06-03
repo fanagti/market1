@@ -27,10 +27,12 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="card-stor">
-                                        <img src="/assets/img/gallery/card.svg" alt="">
-                                        <span>0</span>
-                                    </div>
+                                    <a href="/cart">
+                                        <div class="card-stor">
+                                            <img src="/assets/img/gallery/card.svg" alt="">
+                                            <span>{{ $carts }}</span>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

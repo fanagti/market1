@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -11,11 +12,15 @@ class SesiController extends Controller
 {
      function index()
     {
-        return view('login');
+        return view('login', [
+            'countCarts' => Transaction::countCarts()
+        ]);
     }
      function registerPage()
     {
-        return view('register');
+        return view('register', [
+            'countCarts' => Transaction::countCarts()
+        ]);
     }
 
     function login(Request $request) {

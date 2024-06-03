@@ -1,4 +1,6 @@
 <x-layout>
+  <x-slot:carts>{{ $countCarts }}</x-slot:carts>
+
   <div class="my-login-page ">
     <section class="h-100 ">
       <div class="container h-100 ">

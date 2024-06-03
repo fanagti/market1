@@ -1,4 +1,5 @@
 <x-layout>
+	<x-slot:carts>{{ $countCarts }}</x-slot:carts>
 	<!--? New Arrival Start -->
 	<div class="new-arrival">
 	<div class="container">
